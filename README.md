@@ -5,8 +5,18 @@
 전체 과정을 단계별로 자동화합니다.
 
 ## 사용 방법
+0. **관리자 권한 명령 프롬프트 실행**
+   - 모든 배치 스크립트는 관리자 권한의 명령 프롬프트에서 실행해야 합니다.
+
 1. **스크립트 다운로드**
-   - `00_Download_Script.bat`을 실행하여 빌드 스크립트와 부가 프로그램을 다운로드합니다.
+   - 아래 명령을 입력하면 `00_Download_Script.bat` 파일이 현재 폴더로 내려받아집니다.
+
+```cmd
+bitsadmin /TRANSFER hoge https://raw.githubusercontent.com/HyeonsuParkembedded/Fritzing-install/main/00_Download_Script.bat %cd%\00_Download_Script.bat
+```
+
+   - 다운로드한 `00_Download_Script.bat`을 실행하여 나머지 빌드 스크립트와 필요한 파일을 받습니다.
+
 2. **전체 빌드 실행**
    - `00_Execute_Script.bat`을 관리자 권한으로 실행하면 다음 단계가 순차적으로 진행됩니다.
      1. 필요한 파일 다운로드 및 압축 해제
